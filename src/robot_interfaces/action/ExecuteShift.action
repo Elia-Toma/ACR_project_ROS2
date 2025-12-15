@@ -1,0 +1,12 @@
+# Goal
+uint32 shift_id
+uint32 expected_packages
+float32 battery_initial
+
+---
+# Result
+bool success
+
+---
+# Feedback
+uint32 delivered_packages

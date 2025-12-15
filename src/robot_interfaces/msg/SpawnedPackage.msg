@@ -1,0 +1,4 @@
+string task_id
+int32 shelf_id
+geometry_msgs/Point shelf_position
+geometry_msgs/Point delivery_position

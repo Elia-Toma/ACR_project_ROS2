@@ -1,0 +1,2 @@
+string task_id
+geometry_msgs/Point target_position
