@@ -156,15 +156,7 @@ class RobotNode(Node):
     # -----------------------
     def config_cb(self, msg: String):
         if self.current_pose is not None:
-            pass # Already configured, but we might want to update delivery points if they change dynamically? 
-                 # For now, let's assume static config for robots, but maybe dynamic for points? 
-                 # The original code had a return here. Let's keep it safe and just return if we already have pose?
-                 # Actually, delivery points might come in the same message. Let's parse them anyway if we haven't.
-        
-        # We process config if we haven't set up the robot pose OR if we just want to update globals.
-        # But looking at original code: `if self.current_pose is not None: return`.
-        # This prevents re-parsing. I should probably allow parsing delivery points even if robot is set.
-        # BUT, the safety check `if self.current_pose` was likely to prevent resetting the robot position.
+            pass
         
         try:
             data = json.loads(msg.data)
